@@ -40,6 +40,7 @@ mo$lin2 = mix(mo$const, mo$lin)
 
 mo = mo[sort(names(mo))]
 
+## @DEPRECATED: these models are not used
 # mo_sat1lin = ModelObject(
 #   name = 'sat1-lin',
 #   expr = expression( b1 + (b0-b1)*exp(-k*x) + b2*x ),

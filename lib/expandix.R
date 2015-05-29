@@ -11,7 +11,7 @@
 #' @param iter.max Maximum number of expansion iterations to perform
 #' @param verbose Flag to print messages to console
 #' 
-#' @import pangr, genoRSmallScale
+#' @import pangr
 expandix = function(xy, ix, model=NULL, rmse.init=NULL, rmse.tol.f, bound=c('upper', 'lower'), n.ext=10, iter.max=100, verbose=F) {
   # uses local model fitting to expand the fitted data range of a growth curve
   require(pangr)  # provides smooth.adaptive.loess()
