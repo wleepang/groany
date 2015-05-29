@@ -2,7 +2,7 @@ library(shiny)
 library(ggplot2)
 library(dplyr)
 library(xlsx)
-library(genoRUtils)  # provides ModelObject(), ModelObjectFit()
+library(modelr)  # provides ModelObject(), ModelObjectFit()
 library(pangr)  # provides smooth.adaptive.loess() for expandix()
 
 source('lib/BioscreenExperimentRefClass.R')
