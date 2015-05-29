@@ -40,19 +40,3 @@ mo$lin2 = mix(mo$const, mo$lin)
 
 mo = mo[sort(names(mo))]
 
-## @DEPRECATED: these models are not used
-# mo_sat1lin = ModelObject(
-#   name = 'sat1-lin',
-#   expr = expression( b1 + (b0-b1)*exp(-k*x) + b2*x ),
-#   P = list(p0 = c(b0=0.08, b1=0.1,  b2=0.008, k=0.1),
-#            lb = c(b0=0,    b1=0.08, b2=0,     k=0),
-#            ub = c(b0=0.1,  b1=1,    b2=Inf,   k=1))
-# )
-# 
-# mo_verhulst = ModelObject(
-#   name = 'verhulst',
-#   expr = expression( (K*y0*exp(u*(x-tl)))/(K + y0*(exp(u*(x-tl))-1)) ),
-#   P = list(p0 = c(u=0.3, y0=0.1, tl=10,  K=2), 
-#            lb = c(u=0,   y0=0,   tl=0,   K=0.5), 
-#            ub = c(u=1,   y0=0.5, tl=Inf, K=10))
-# )
