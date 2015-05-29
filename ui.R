@@ -15,7 +15,8 @@ swap_names_values = function(x) {
 }
 
 shinyUI(bootstrapPage(
-  br(),
+  title = 'Bioscreeny',
+  p(class="col-xs-12 bg-primary", 'Bioscreeny: A tool to fit growth curves'),
   div(
     class = 'container-fluid',
     
@@ -118,6 +119,19 @@ shinyUI(bootstrapPage(
       )
     )
   ),
-  tags$head(tags$style(type="text/css", ".form-control {padding: 6px 6px}"))
+  div(
+    id='app-footer',
+    class='col-xs-12 text-muted',
+    span('{{VERSION}}', class='col-xs-4 text-left'),
+    span(HTML('&copy; Genomatica, Inc, 2015'), class='col-xs-4 text-center'),
+    span('Powered by R & Shiny', class='col-xs-4 text-right')
+  ),
+  tags$head(
+    tags$style(
+      type="text/css", "
+.form-control {padding: 6px 6px}
+#app-footer {position:fixed; bottom: 0px; left: 0px; height:26px; width: 100%; z-index: 9999; background-color: white; border-top: 1px solid lightgray; padding-top: 3px; padding-bottom: 3px}
+"
+      ))
   
 ))
